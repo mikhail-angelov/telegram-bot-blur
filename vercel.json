@@ -1,0 +1,5 @@
+{
+  "version": 2,
+  "builds": [{ "src": "/public/*.*", "use": "@vercel/static" }, { "src": "/web/*.go", "use": "@vercel/go" },{ "src": "/api/*.go", "use": "@vercel/go" }],
+  "routes": [{ "src": "/", "dest": "/public" },{ "src": "/api", "dest": "/api" }, { "src": "/web", "dest": "/web" }]
+}
