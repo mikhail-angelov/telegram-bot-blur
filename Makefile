@@ -13,9 +13,9 @@ run:
 .PHONY: run
 
 register:
-	curl -F "url=${LAMBDA_URL}" https://api.telegram.org/bot${MOD_BOT_TOKEN}/setWebhook
+	curl -F "url=${LAMBDA_URL}" https://api.telegram.org/bot${BOT_TOKEN}/setWebhook
 .PHONY: register
 
 unregister:
-	curl https://api.telegram.org/bot${MOD_BOT_TOKEN}/deleteWebhook
+	curl https://api.telegram.org/bot${BOT_TOKEN}/deleteWebhook
 .PHONY: unregister

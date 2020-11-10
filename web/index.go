@@ -18,7 +18,7 @@ func GetRouter() *mux.Router {
 	return r
 }
 
-// Handler entry point
+// WebHandler entry point
 func WebHandler(w http.ResponseWriter, r *http.Request) {
 	// Parse our multipart form, 10 << 20 specifies a maximum
 	// upload of 10 MB files.
@@ -37,7 +37,7 @@ func WebHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("Uploaded File: %+v\n", handler.Filename)
 	fmt.Printf("File Size: %+v\n", handler.Size)
 	fmt.Printf("MIME Header: %+v\n", handler.Header)
-
+	Î
 	w.Header().Set("Content-Type", "image/jpeg")
 	err = blur(file, w)
 	if err != nil {
